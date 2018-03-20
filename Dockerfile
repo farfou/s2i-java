@@ -5,7 +5,7 @@ MAINTAINER Jorge Morales <jmorales@redhat.com>
 
 # Install build tools on top of base image
 # Java jdk 8, Maven 3.3, Gradle 2.6
-RUN INSTALL_PKGS="tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel" && \
+RUN INSTALL_PKGS="tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel cabextract" && \
     yum install -y --enablerepo=centosplus $INSTALL_PKGS && \
     yum install -y https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm && \
     rpm -V $INSTALL_PKGS && \
